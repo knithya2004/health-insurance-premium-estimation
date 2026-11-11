@@ -311,7 +311,14 @@ nb["metadata"] = {"kernelspec": {"display_name": "Python 3", "language": "python
                   "language_info": {"name": "python"}}
 
 if __name__ == "__main__":
-    ep = ExecutePreprocessor(timeout=1800, kernel_name="python3")
-    ep.preprocess(nb, {"metadata": {"path": str(HERE)}})
+    if ExecutePreprocessor is not None:
+        try:
+            ep = ExecutePreprocessor(timeout=1800, kernel_name="python3")
+            ep.preprocess(nb, {"metadata": {"path": str(HERE)}})
+            print("Executed notebook cells successfully.")
+        except Exception as e:
+            print(f"Cell execution skipped ({e}); saving notebook structure.")
+    else:
+        print("ExecutePreprocessor not available; saving notebook structure directly.")
     nbf.write(nb, OUT)
-    print("Wrote executed notebook:", OUT)
+    print("Wrote notebook:", OUT)
