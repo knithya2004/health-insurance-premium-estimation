@@ -23,12 +23,14 @@ pip install -r requirements.txt
 python run_pipeline.py               # raw CSV -> clean -> 14 charts -> models -> SHAP -> reports
 python notebooks/build_notebook.py   # rebuilds and executes the notebook with all outputs
 python predict.py                    # indicative quote for an example proposal
+streamlit run app.py                 # interactive quote estimator & underwriting web application
 python -m pytest -q                  # tests
 ```
 
 ## Project structure
 
 ```
+app.py                                       interactive Streamlit web application (quote tool, governance, charts)
 data/raw/health_insurance_proposals.csv      raw proposals (6,242 x 21)
 data/processed/health_insurance_clean.csv    cleaned data
 notebooks/health_insurance_premium_estimation.ipynb   executed notebook, all outputs

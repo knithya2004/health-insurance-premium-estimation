@@ -10,3 +10,4 @@ nbformat
 nbconvert
 ipykernel
 pytest
+streamlit>=1.30
