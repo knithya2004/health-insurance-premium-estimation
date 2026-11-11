@@ -1,0 +1,47 @@
+{
+  "dataset": {
+    "raw_rows": 6242,
+    "clean_rows": 6125,
+    "train_rows": 4807,
+    "test_rows": 1318,
+    "split_date": "2025-07-01",
+    "seed": 42
+  },
+  "best_model_by_cv_rmse": "Linear Regression (log target)",
+  "best_model_test_metrics": {
+    "MAE": 842.1386,
+    "MSE": 4371044.6495,
+    "RMSE": 2090.7043,
+    "R2": 0.9953,
+    "MAPE_%": 2.7,
+    "within_10pct_%": 98.2549
+  },
+  "gradient_boosting_test_metrics": {
+    "MAE": 2543.1607,
+    "MSE": 57426631.3246,
+    "RMSE": 7578.0361,
+    "R2": 0.9384,
+    "MAPE_%": 7.6557,
+    "within_10pct_%": 73.0653
+  },
+  "success_criteria": {
+    "test_R2_>=_0.95": true,
+    "test_MAPE_<_8%": true,
+    "share_within_10pct_>=_75%": true
+  },
+  "top_shap_features": [
+    "age_over_40",
+    "eldest_member_age",
+    "family_size",
+    "log_sum_insured",
+    "is_floater",
+    "smoker_x_age",
+    "zone_Zone A",
+    "rate_revision"
+  ],
+  "example_quote": {
+    "description": "49-year-old smoker, Family Floater, 4 members, ₹15L cover",
+    "predicted_gb": 48062,
+    "underwriter": 53445
+  }
+}

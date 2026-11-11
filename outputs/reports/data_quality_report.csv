@@ -1,0 +1,17 @@
+,value
+rows,6242.0
+columns,21.0
+exact duplicate rows,94.0
+duplicate % ,1.51
+missing bmi %,4.57
+missing annual_income_lakh %,6.04
+blank pre_existing_conditions %,3.0
+missing smoker %,1.51
+invalid ages (<18 or >100),14.0
+zero or negative premiums,9.0
+BMI with missed decimal (>100),30.0
+sum insured entered in lakh (<1000),41.0
+distinct smoker spellings,10.0
+distinct policy_type spellings,8.0
+distinct zone spellings,12.0
+distinct city spellings,52.0
