@@ -7,6 +7,7 @@ import numpy as np
 import pandas as pd
 import seaborn as sns
 
+from . import numba_compat  # noqa: F401
 from .config import FIG_DIR, TARGET
 from .features import COND_FLAGS, NUM_COLS
 

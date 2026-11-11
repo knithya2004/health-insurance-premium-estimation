@@ -7,6 +7,7 @@ models, explains Gradient Boosting with SHAP and saves metrics, summary and mode
 """
 import json
 
+from src import numba_compat  # noqa: F401
 import joblib
 import numpy as np
 import pandas as pd

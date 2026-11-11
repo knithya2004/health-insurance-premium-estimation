@@ -8,7 +8,10 @@ The notebook is generated from the cells below, then executed so that every outp
 from pathlib import Path
 
 import nbformat as nbf
-from nbconvert.preprocessors import ExecutePreprocessor
+try:
+    from nbconvert.preprocessors import ExecutePreprocessor
+except Exception:
+    ExecutePreprocessor = None
 
 HERE = Path(__file__).resolve().parent
 OUT = HERE / "health_insurance_premium_estimation.ipynb"
@@ -48,6 +51,7 @@ ROOT = Path.cwd().parent if Path.cwd().name == "notebooks" else Path.cwd()
 os.chdir(ROOT)
 sys.path.insert(0, str(ROOT))
 
+from src import numba_compat  # noqa: F401
 import numpy as np
 import pandas as pd
 import shap

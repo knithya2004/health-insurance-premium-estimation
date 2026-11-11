@@ -6,3 +6,4 @@ venv/
 .pytest_cache/
 .DS_Store
 .vscode/
+terv-aiml-tftpl310-health-insurance-premium-estimation/
